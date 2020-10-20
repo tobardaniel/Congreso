@@ -1,0 +1,141 @@
+\ProvidesPackage{my-diploma}%por elser lopez, 2019
+\usepackage{calligra}%Letra en carta 
+\usepackage{setspace}%espaciado entre lineas
+\usepackage{graphicx}
+\graphicspath{{Imágenes para fondos/}}
+
+%----Fondo del diploma
+%La opción pages puede ser all (para todo el documento) o some, para algunas partes del documento
+\usepackage[pages=all]{background}
+% configuración
+\backgroundsetup{
+ scale=1, %escala de la imagen, es recomendable que sea del mismo tamaño que el pdf
+ color=black, %fondo a usar para transparencia
+ opacity=100, %nivel de transparencia
+ angle=0, %en caso de querer una rotación
+ contents={%
+  \includegraphics[width=\paperwidth,height=\paperheight]{DiplomaParticipantes.png} %nombre de la imagen a utilizar como fondo
+ }%
+}
+
+\setlength{\parindent}{0mm} %sangría de los párrafos
+%para que no corte palabras
+    \usepackage[none]{hyphenat}
+
+%Nombres de quienes firma e institución a la que pertenecen
+\providecommand{\firmas}{
+~\\
+~\\
+\begin{tabular}{p{4.5cm}p{4.5cm}p{4.5cm}p{4.5cm}p{4.5cm}}
+    \centering Lic. Erick Rojas Coordinador de Física UMG &         
+    & \centering PhD. Adrián Gil Méndez Decano de CCHH\\ UVG & \\
+    & \centering   Bryant Morazán\\ Coordinador General \\VI Congreso Estudiantil de Física y Matemática &  
+    &  \centering   MSc. Marcelo Ixquiac Director \\ECFM-USAC 
+    
+   
+\end{tabular}
+}
+
+%general el nombre del congreso con el Numero que corresponde
+\providecommand{\ncongres}[1]{#1 Congreso Estudiantil de Física y Matemática}
+
+\providecommand{\encabezado}{
+    \centering{\rule[-1pt]{17cm}{2pt}\\ \Huge{\textbf{VI CONGRESO ESTUDIANTIL DE FÍSICA Y MATEMÁTICA}}\\ \rule[1pt]{13cm}{2pt} }
+}
+
+
+%Diplomas de charlas
+\providecommand{\charla}[2]{
+\newpage \encabezado 
+\null\vfill 
+\begin{center}
+\vspace*{-4.5cm}
+\large{El comité organizador}
+\large{otorga el presente}\\
+
+
+\Huge{\textbf{D I P L O M A}}\\
+\large{a}\\~\\
+\textbf{\Huge{ \calligra{#1}}}
+\end{center}~\\ 
+    Por su participación en el \textbf{\ncongres{VI}}, realizado en colaboración con la Escuela de Ciencias Físicas y Matemáticas de la Universidad de San Carlos de Guatemala (ECFM-USAC), Universidad del Valle de Guatemala (UVG), Universidad Mariano Gálvez (UMG), y la Universidad Galileo de Guatemala. Del 28 septiembre al 2 de octubre de 2020.\\ Y por su colaboración como expositor de la charla titulada: \begin{center}
+    \textbf{\Large{\textit{#2}}}\\~\\
+   Guatemala, 2 de octubre de 2020.\\~\\
+    \vfill
+    
+\end{center} 
+}
+
+
+%Diplomas para los ganadores de los posters
+
+\providecommand{\poster}[3]{
+        \newpage \encabezado 
+\null\vfill 
+\begin{center}
+\vspace*{-4.5cm}
+\large{El comité organizador}
+\large{otorga el presente}\\
+\Huge{\textbf{D I P L O M A}}\\
+\large{a}\\
+\textbf{\Huge{ \calligra{#1}}}
+\end{center}~\\ 
+ Por su participación en el \textbf{\ncongres{VI}}, realizado en colaboración con la Escuela de Ciencias Físicas y Matemáticas de la Universidad de San Carlos de Guatemala (ECFM-USAC), Universidad del Valle de Guatemala (UVG), Universidad Mariano Gálvez (UMG), y la Universidad Galileo de Guatemala. Del 28 septiembre al 2 de octubre de 2020. Y por haber obtenido el \textbf{\textit{#3}} \textbf{\textit{lugar}} en la sesión de póster científicos 2020, con el póster titulado: \begin{center}
+    \textbf{\Large{\textit{#2}}}\\~\\
+   Guatemala, 2 de octubre de 2020.\\~\\
+   
+   \vfill
+
+
+
+\end{center} 
+}
+
+%diplomas colaboradores
+\providecommand{\colaborador}[2]{
+        \newpage \encabezado 
+\null\vfill 
+\begin{center}
+\vspace*{-2.5cm}
+\large{El comité organizador}
+\large{otorga el presente}\\
+\Huge{\textbf{D I P L O M A}}\\
+\Large{DE RECONOCIMIENTO}\\
+\large{a}\\
+\textbf{\Huge{ \calligra{#1}}}
+\end{center}~\\ 
+Por su participación en el \textbf{\ncongres{VI}}, realizado en colaboración con la Escuela de Ciencias Físicas y Matemáticas de la Universidad de San Carlos de Guatemala (ECFM-USAC), Universidad del Valle de Guatemala (UVG), Universidad Mariano Gálvez (UMG), y la Universidad Galileo de Guatemala. Del 28 septiembre al 2 de octubre de 2020. Y por haber formado parte de la organización del Congreso Estudiantil como\\ \textbf{\textit{#2}}. \begin{center}
+   ~\\
+  Guatemala, 2 de octubre de 2020.\\~\\
+   
+   \vfill
+
+
+\vfill
+\end{center} 
+}
+
+%Diplomas de participación
+
+\providecommand{\participacion}[1]{
+        \newpage \encabezado 
+\null\vfill 
+\begin{center}
+\vspace*{-3.5cm}
+\large{El comité organizador}
+\large{otorga el presente}\\
+\Huge{\textbf{D I P L O M A}}\\
+\large{a}\\~\\
+\textbf{\Huge{ \calligra{#1}}}
+\end{center}~\\ 
+Por su participación en el \textbf{\ncongres{VI}}, realizado en colaboración con la Escuela de Ciencias Físicas y Matemáticas de la Universidad de San Carlos de Guatemala (ECFM-USAC), Universidad del Valle de Guatemala (UVG), Universidad Mariano Gálvez (UMG), y la Universidad Galileo de Guatemala. \begin{center}
+   ~\\
+  Guatemala, 28 de septiembre al 2 de octubre de 2020.\\~\\
+   
+   \vfill
+
+
+\vfill
+\end{center} 
+
+}

@@ -1,0 +1,19 @@
+\documentclass[12pt,letterpage]{article}
+\usepackage[utf8]{inputenc}
+\pagestyle{empty}
+%la configuracion de los diplomas esta en my-diploma.sty
+
+\usepackage{my-diploma}%paquete que contiene todo el diploma
+
+
+
+%margenes
+\usepackage[left=5.9cm,right=3cm,top=1cm,bottom=2.5cm, landscape] {geometry}
+
+%-------------------------------------------------
+%Aquí se inputea que tipo de diploma se quiere desplegar, por ejemplo, si se desea desplegar los diplomas de participación se indica acá.
+%-----------------------------------------------
+%Para ingresar los nombres ir a los respectivos .tex.
+\begin{document}
+ \input{dip-participacion.tex}
+\end{document}
