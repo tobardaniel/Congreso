@@ -8,7 +8,7 @@ def LeerDatos(archivo):
 	f = open(archivo, 'r+', encoding = 'utf-8')
 	for line in f:
 		arr = line.rstrip('\n').split(",")
-		arr = [x.replace('"','') for x in arr]
+		arr = [x.replace('"','').rstrip(' ') for x in arr]
 		arreglo.append(arr)
 	arreglo.pop(0)
 	return arreglo
@@ -18,7 +18,7 @@ def LeerDatos(archivo):
 con el nombre del correo y adentro el pdf del diploma y un mensaje de agradecimiento.'''
 def GenerarDiplomas(arreglo):
 	correo = arreglo[0]
-	nom = arreglo[1] + arreglo[3]
+	nom = arreglo[1].replace(' ','') + arreglo[3].replace(' ','')
 	# Función de espacios para concatenar correctamente en caso de haber segundo nombre vacío
 	espacios = [" " if x != "" else "" for x in arreglo]
 	nombre = arreglo[1]
@@ -46,7 +46,7 @@ def GenerarDiplomas(arreglo):
 	os.system(comando)
 	#genera el mensaje de felicitación
 	f_in = open('felicitacion.txt', 'r', encoding = 'utf-8') #mensaje genérico
-	mensaje = 'Mensaje' + arreglo[1] +'.txt'
+	mensaje = 'Mensaje' + nom +'.txt'
 	f_out = open(mensaje, 'w+', encoding = 'utf-8') #genera archivo personalizado
 	for line in f_in:
 		f_out.write(line.replace('[PRIMER]', arreglo[1]).replace('[CORREO]', correo)) #reemplaza placeholders

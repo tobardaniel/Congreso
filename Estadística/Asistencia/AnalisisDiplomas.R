@@ -31,9 +31,9 @@ ins <- inscrip[ , names(inscrip) %in% nom]
 #Queremos los que estaban inscritos y tienen la asistencia mínima
 print(length(ap))
 ins_dip<- ins[(!duplicated(ins$Nombre.de.usuario)) & (ins$Nombre.de.usuario %in% ap) ,]
-print(nrow(ins_dip))
+ins_dip<- ins_dip[order(ins_dip$Nombre.de.usuario),] #ordena por correo
 vect <- ap
-vect <- !(ap%in%ins_dip$Nombre.de.usuario)
+vect <- !(ap%in%ins_dip$Nombre.de.usuario) #determina quiénes asistieron pero no estaban inscritos
 noins_dip <- aprobados[vect,]
 
 ####################################################################################################
