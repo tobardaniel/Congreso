@@ -71,8 +71,9 @@ def cmd(string):
 # Método main para generar los diplomas
 def main():
 	#Genera las carpetas para cada letra
-	archivo = "..\\..\\Estadística\\Asistencia\\Diplomas2.csv"
-	arreglo = LeerDatos(archivo)
+	#archivo = "..\\..\\Estadística\\Asistencia\\Diplomas2.csv"
+	#arreglo = LeerDatos(archivo)
+	arreglo = [["anagaby2511@gmail.com","Ana", "Gabriela", "Arango", "Hernández"],["angel.caceres.bejarano@gmail.com","Angel", "Fernando", "Cáceres", "Bejarano"]]
 	for arr in arreglo:
 		GenerarDiplomas(arr)
 	
