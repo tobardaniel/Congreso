@@ -73,7 +73,7 @@ def main():
 	#Genera las carpetas para cada letra
 	#archivo = "..\\..\\Estadística\\Asistencia\\Diplomas2.csv"
 	#arreglo = LeerDatos(archivo)
-	arreglo = [["anagaby2511@gmail.com","Ana", "Gabriela", "Arango", "Hernández"],["angel.caceres.bejarano@gmail.com","Angel", "Fernando", "Cáceres", "Bejarano"]]
+	arreglo = [["elayonestuardo168@gmail.com","Robin" ,"Estuardo", "de León", "Pérez"],["doryohana@gmail.com","Dory", "Yohana", "Morales", "García"], ["andreags0309@gmail.com","Andrea","", "García",""]]
 	for arr in arreglo:
 		GenerarDiplomas(arr)
 	
