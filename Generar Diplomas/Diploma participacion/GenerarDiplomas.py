@@ -36,7 +36,7 @@ def GenerarDiplomas(arreglo):
 	#Compila el diploma
 	os.system('pdflatex main.tex')
 	#Define el path al que se moverá
-	path = '..\\Diplomas\\' + letra +'\\' + correo
+	path = '..\\Diplomas2\\' + letra +'\\' + correo
 	#crea la carpeta
 	comando = cmd('mkdir ' + path)
 	os.system(comando)
@@ -71,7 +71,7 @@ def cmd(string):
 # Método main para generar los diplomas
 def main():
 	#Genera las carpetas para cada letra
-	archivo = "..\\..\\Estadística\\Asistencia\\Diplomas.csv"
+	archivo = "..\\..\\Estadística\\Asistencia\\Diplomas2.csv"
 	arreglo = LeerDatos(archivo)
 	for arr in arreglo:
 		GenerarDiplomas(arr)
